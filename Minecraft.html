@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Video</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minecraft Video</title>
+        <style>
         @font-face {
         font-family: 'Monocraft';
         src: url('https://raw.githubusercontent.com/RandomMonkey99/Background/refs/heads/main/Monocraft.ttf') format('truetype');
@@ -26,24 +26,26 @@
             border-radius: 5px;
             font-family: 'Monocraft';
         }
-        *{
-            cursor: url('https://raw.githubusercontent.com/RandomMonkey99/Background/refs/heads/main/torch.png'), pointer;
-        }
     </style>
-</head>
-<body>
-    <img src="https://raw.githubusercontent.com/RandomMonkey99/Background/refs/heads/main/wallpaper.gif" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); object-fit: cover;" alt="Background GIF">
-    <div class="clock" id="clock"></div>
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
-</body>
+    </head>
+    <body>
+        <img
+            src="https://raw.githubusercontent.com/RandomMonkey99/Background/refs/heads/main/wallpaper.gif"
+            style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); object-fit: cover;"
+            alt="Background GIF">
+        <div class="clock" id="clock"></div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+                });
+            </script>
+    </body>
 </html>
